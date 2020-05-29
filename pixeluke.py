@@ -48,12 +48,16 @@ with open(pwlist) as pw:	# open the file
 
 		else:
 			# holy crap, we found something!!
+			with open('output.txt', 'r') as f:
+				file_check = f.read()
+
+			print("")
 			print("------- !!!FOUND PASSWORD!!! -------")
 			print("")
 			print("Password:    [  " + str(pword) + "  ]")
 			print("Try # " + str(cnt))
 			print("")
-			print("----- ----- ----- ----- ----- ------")
+			print(str(file_check))
 			print("")
 			pword = ""		# clear this variable and break out of our loop.
 
